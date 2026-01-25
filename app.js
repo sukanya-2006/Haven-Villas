@@ -48,16 +48,24 @@ main()
 
 
 async function main() {
-    await mongoose.connect(dbUrl);
-}
+    await mongoose.connect(dbUrl, {
+        ssl: true,
+        tlsAllowInvalidCertificates: true,
+    });
+};
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
-    crypto : {
+    mongoOptions: {
+        ssl: true,
+        tlsAllowInvalidCertificates: true,
+    },
+    crypto: {
         secret: process.env.SECRET,
     },
     touchAfter: 24 * 3600,
 });
+
 
 store.on("error", (err) => {
      console.log("ERROR in MONGO SESSION STORE", err);
@@ -111,60 +119,10 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", {err});
 });
 
-app.listen(8080, () => {
-    console.log("server is listening to port 8080");
+
+
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+    console.log(`server is listening to port ${port}`);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// app.get("/testListing", async (req, res) => {
-//     let sampleListing = new Listing({
-//         title: "My New Villa",
-//         description: "By the beach",
-//         price: 1200,
-//         Location: "Pondicherry",
-//         country: "India",
-//     });
-
-//     await sampleListing.save();
-//     console.log("sample was saved");
-//     res.send("successful testing");
-// });
-
-
-// place this AFTER all your real routes
-// app.use((req, res, next) => {
-//   next(new ExpressError(404, "Page Not Found!"));
-// });
-
-
-
-// 
-// // all your routes here (listings, reviews, show, etc.)
-
-// app.all(/.*/, (req, res, next) => {
-//     next(new ExpressError(404, "Page Not Found!"));
-// });
-
-// app.use((err, req, res, next) => {
-//     let {statusCode=500, message="Something went wrong"} = err;
-//     res.status(statusCode).render("error.ejs", {err});
-// });
-
-// app.listen(8080, () => {
-//     console.log("server is listening to port 8080");
-// });
-
