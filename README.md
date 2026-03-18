@@ -1,96 +1,110 @@
-🏡 Haven Villas
-✨ Full Stack Villa Booking Platform (Airbnb Inspired)
-📌 Overview
+# 🏡 Haven Villas
 
-Haven Villas is a full-stack villa rental and booking platform inspired by Airbnb.
-Users can explore listings, view detailed property pages, create accounts, log in securely, and post reviews.
+### ✨ Full Stack Villa Booking Platform (Airbnb Inspired)
 
-This project demonstrates real-world backend architecture including authentication, session management, RESTful routing, MongoDB integration, and MVC structure.
+---
 
-🚀 Features
-👤 User Features
+## 📌 Overview
 
-Secure User Authentication (Signup / Login / Logout) using Passport.js
+**Haven Villas** is a full-stack villa rental and booking platform inspired by Airbnb.
 
-Browse all villa listings
+Users can:
 
-View detailed listing pages
+- Explore villa listings  
+- View detailed property pages  
+- Create accounts & login securely  
+- Post reviews and ratings  
 
-Add reviews and ratings
+This project demonstrates **real-world backend architecture** including authentication, session management, RESTful routing, MongoDB integration, and MVC design.
 
-Flash messages for actions (success / error)
+---
 
-Session based login persistence
+## 🚀 Features
 
-🏡 Listing Features
+### 👤 User Features
 
-Create new villa listings
+- Secure Authentication (Signup / Login / Logout) using **Passport.js**
+- Browse all villa listings  
+- View detailed listing pages  
+- Add reviews and ratings  
+- Flash messages for actions (success / error)  
+- Session-based login persistence  
 
-Edit existing listings
+### 🏡 Listing Features
 
-Delete listings
+- Create new villa listings  
+- Edit existing listings  
+- Delete listings  
+- View listing images & details  
 
-View listing images & details
+### ⭐ Review System
 
-⭐ Review System
+- Add reviews to listings  
+- Nested routing structure  
+- Review validation & error handling  
 
-Add reviews to listings
+### ⚠️ Error Handling
 
-Nested routing structure
+- Custom Express error class  
+- 404 page handling  
+- Centralized error middleware  
 
-Review validation & error handling
+---
 
-⚠️ Error Handling
+## 🛠️ Tech Stack
 
-Custom Express error class
+### 💻 Backend
 
-404 page handling
+- Node.js  
+- Express.js  
+- MongoDB  
+- Mongoose  
 
-Centralized error middleware
+### 🔐 Authentication & Security
 
-🛠️ Tech Stack
-💻 Backend
+- Passport.js  
+- Passport-Local  
+- Express Session  
+- Connect-Mongo  
+- Flash Messages  
 
-Node.js
+### 🎨 Frontend (Server Rendered)
 
-Express.js
+- EJS  
+- EJS-Mate  
+- Method Override  
 
-MongoDB
+### ⚙️ Tools
 
-Mongoose
+- Git & GitHub  
+- MongoDB Atlas  
+- Nodemon  
+- Postman  
 
-🔐 Authentication & Security
+---
 
-Passport.js
+## 🧠 Key Learning Outcomes
 
-Passport-Local
+- Built a real-world booking platform  
+- Implemented MVC architecture  
+- Designed RESTful routing structure  
+- Integrated authentication & session storage  
+- Implemented centralized error handling  
+- Integrated **Mapbox geolocation & coordinate handling**  
+- Learned deployment & production configuration  
 
-Express Session
+---
 
-Connect-Mongo (Session Store)
+## 📂 Project Structure
 
-Flash Messages
+## 📂 Project Structure
 
-🎨 Frontend (Server Rendered)
+![Project Structure](./assets/screenshots/villa-folder-structure.jpg)
 
-EJS
+---
 
-EJS-Mate Layout Engine
+---
 
-Method Override
-
-⚙️ Tools
-
-Git & GitHub
-
-MongoDB Atlas
-
-Nodemon
-
-Postman
-
-
-##
-Project Structure:
-
-![Project structure](screenshots/villa-folder-structure.jpg)
+<p align="center">
+Made with ❤️ by <b>@Sukanya</b>
+</p>
