@@ -95,13 +95,11 @@ This project demonstrates **real-world backend architecture** including authenti
 
 ---
 
-## 📂 Project Structure
 
 ## 📂 Project Structure
 
 ![Project Structure](./assets/screenshots/villa-folder-structure.jpg)
 
----
 
 ---
 
